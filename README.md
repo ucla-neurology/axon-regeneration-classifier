@@ -1,1 +1,1 @@
-# axon-regeneration-classifier
+# Axon Regeneration Classifier
