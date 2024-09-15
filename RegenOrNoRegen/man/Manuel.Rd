@@ -1,0 +1,22 @@
+\name{RegenOrNoRegen}
+\alias{RON}
+\title{RegenOrNoRegen}
+\usage{
+SeuratLoad(SEURAT,GeneIDType="SYMBOL")
+SEURAT=SeuratReturn(SEURAT,GeneIDType="SYMBOL")
+CDSLoad(CDS,GeneIDType="SYMBOL")
+CDS=CDSReturn(CDS,GeneIDType="SYMBOL")
+DataLoad(Table,Metadata=NULL,GeneIDType="SYMBOL")
+DataReturn=DataReturn(Table,Metadata=NULL,GeneIDType="SYMBOL")
+}
+\description{
+"Generate Regeneration Index"
+}
+\examples{
+SeuratLoad(SEURAT,GeneIDType="SYMBOL")
+SEURAT=SeuratReturn(SEURAT,GeneIDType="SYMBOL")
+CDSLoad(CDS,GeneIDType="SYMBOL")
+CDS=CDSReturn(CDS,GeneIDType="SYMBOL")
+DataLoad(Table,Metadata=NULL,GeneIDType="SYMBOL")
+DataReturn=DataReturn(Table,Metadata=NULL,GeneIDType="SYMBOL")
+}

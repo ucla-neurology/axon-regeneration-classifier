@@ -1,0 +1,11 @@
+Package: RegenOrNoRegen
+Type: Package
+Title: Find whether single neuron is regenerating
+Version: 0.1.3
+Author: Hugo Kim
+Maintainer: Hugo Boss <jmk002@health.ucsd.edu>
+Description: Package can be used for checking regenerative ability of neurons
+License: Drivers License
+Encoding: UTF-8
+LazyData: true
+Depends: ggplot2, devtools, garnett, org.Hs.eg.db, org.Mm.eg.db, ggplot2, Seurat, scuttle, gtools, R (>= 4.1.0)
