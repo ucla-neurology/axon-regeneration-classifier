@@ -22,7 +22,7 @@ library(Seurat)
 
 
 
-SeuratReturn <-function (SEURAT,GeneIDType="SYMBOL"){
+SeuratLoadReturn <-function (SEURAT,GeneIDType="SYMBOL"){
   CDS <-as.CellDataSet(SEURAT)
   CDS <- estimateSizeFactors(CDS)
   CDS <- classify_cells(CDS, Hugo_classifier,
@@ -35,7 +35,8 @@ SeuratReturn <-function (SEURAT,GeneIDType="SYMBOL"){
   Regeneration_Index[Regeneration_Index== "RegeneratingCST(Cl1)"]<-"Regenerating"
   Regeneration_Index[Regeneration_Index== "Cl1"]<- "Unknown"
   Regeneration_Index=factor(Regeneration_Index, levels=c("Unknown", "NonRegenerating","Regenerating"))
-  SEURAT$Regeneration_Index= Regeneration_Index
+  print(ggplot(UMAP, aes(x = UMAP[,1], y = UMAP[,2], color = Regeneration_Index)) + geom_point() + labs(x = "UMAP1", y = "UMAP2", color = "Regeneration Class") + theme_bw() + scale_color_manual(values = c("Unknown" = "lightblue", "NonRegenerating" = "lightgreen", "Regenerating" = "lightcoral")))
+  SEURAT$Regeneration_Index <- Regeneration_Index
   return(SEURAT)
   }
 
